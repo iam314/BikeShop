@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                window.onbeforeunload = function() { ws = null }
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link');
+                    for (var i = 0; i < links.length;i++) {
+                    var link = links[i];
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+	<meta charset="utf-8">
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+	<title>Dentacoin Platform</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Dentacoin">
+	<meta name="author" content="Lyudmil Dachev">
+	<!-- Le styles -->
+	<link href="css/platform.css" rel="stylesheet">
+	<style>
+	/* Ensure elements load hidden before ScrollReveal runs */
+	.sr .fooReveal { visibility: hidden; }
+	/* add perspective to your container */
+	.fooContainer { perspective: 800px; }
+</style>
+</head>
+
+<body class="Site">
+	<main class="Site-content">
+<nav class="container-fluid">
+
+  <div class="row">
+      <div class="col col--2-of-12 col col--m-1-of-2 col col--s-1-of-2">
+        <a href="index.html" class="current-parent logo">Go Home</a>
+      </div>
+      <div class="col col--10-of-12 col col--m-1-of-2 col col--s-1-of-2">
+  			<ul>
+          <li>
+            <img src="img/avatar.svg" alt="Avatar" class="avatar">
+          </li>
+          <Li>
+            <div class="dropdown">
+              <button class="dropbtn">Donika &#9660;</button>
+              <div class="dropdown-content">
+                <a href="#">Settings</a>
+                <a href="login.html">Log out</a>
+              </div>
+            </div>
+          </Li>
+  			</ul>
+      </div>
+	</div>
+
+</nav>
+
+<section class="container-fluid">
+	<div class="container contentwrap">
+
+
+		<div class="row">
+
+			<div class="col col--3-of-12 col col--m-1-of-2 col col--s-1-of-2 foo">
+				<img class="img-responsive icons" src="img/dentist_icon.svg" alt="App Icon">
+				<h3>
+					My Dentist
+				</h3>
+			</div>
+
+			<div class="col col--3-of-12 col col--m-1-of-2 col col--s-1-of-2 foo">
+				<img class="img-responsive icons" src="img/dentavox_icon.svg" alt="App Icon">
+				<h3>
+					DentaVox
+				</h3>
+			</div>
+
+			<div class="col col--3-of-12 col col--m-1-of-2 col col--s-1-of-2 foo">
+				<img class="img-responsive icons" src="img/trusted_reviews_icon.svg" alt="App Icon">
+				<h3>
+					Trusted Reviews
+				</h3>
+			</div>
+
+			<div class="col col--3-of-12 col col--m-1-of-2 col col--s-1-of-2 foo">
+				<img class="img-responsive icons" src="img/dentacare_icon.svg" alt="App Icon">
+				<h3>
+					Dentcare
+				</h3>
+			</div>
+
+		</div>
+
+
+		<div class="row">
+			<div class="col col--3-of-12 col col--m-1-of-2 col col--s-1-of-2 foo">
+				<img class="img-responsive icons" src="img/buy_DCN_icon.svg" alt="App Icon">
+				<h3>
+					Buy Dentacoin
+				</h3>
+			</div>
+			<div class="col col--3-of-12 col col--m-1-of-2 col col--s-1-of-2 foo">
+				<img class="img-responsive icons" src="img/wallet_icon.svg" alt="App Icon">
+				<h3>
+					My Wallet
+				</h3>
+
+			</div>
+			<div class="col col--3-of-12 col col--m-1-of-2 col col--s-1-of-2 foo">
+				<img class="img-responsive icons" src="img/global_partners_icon.svg" alt="App Icon">
+				<h3>
+					Global Network
+				</h3>
+
+			</div>
+			<div class="col col--3-of-12 col col--m-1-of-2 col col--s-1-of-2 foo">
+				<img class="img-responsive icons" src="img/blog_icon.svg" alt="App Icon">
+				<h3>
+					Blog
+				</h3>
+			</div>
+		</div>
+
+
+	</div>
+</section>
+
+
+</main>
+<footer class="container">
+
+		<div class="row">
+			<div class="col col--12-of-12">
+				<p class="copyright">
+					© Dentacoin Foundation. All rights reserved. |&nbsp;<a href="#" class="innerlinks">Privacy&nbsp;Policy</a> | <a href="#" class="innerlinks">Terms&nbsp;of&nbsp;Use</a>
+				</p>
+			</div>
+		</div>
+
+</footer>
+
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<script type="text/javascript">
+window.sr = ScrollReveal();
+sr.reveal('.foo');
+sr.reveal('.bar');
+sr.reveal('.foo', { duration: 1000 });
+</script>
+
+</body>
+</html>
