@@ -18,9 +18,8 @@
 		<div class="row">
 			<div class="col col--12-of-12">
 				<p class="copyright">
-					© Dentacoin Foundation. All rights reserved.<br>
-					The Netherlands Chamber of Commerce Business Register extract.
-					Wim Duisenbergplantsoen 31 6221 SE Maastricht The Netherlands.<br>
+					© Bikeshop. All rights reserved.<br>
+					Dornbergstraße 30-48, 81673 München, Germany<br>
 					Read our <a href="#" class="innerlinks">Privacy&nbsp;Policy</a> & <a href="#" class="innerlinks">Terms&nbsp;of&nbsp;Use</a>
 				</p>
 			</div>
@@ -43,24 +42,15 @@ function closeNav() {
 }
 </script>
 
-<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
-window.sr = ScrollReveal();
-sr.reveal('.foo');
-sr.reveal('.bar');
-sr.reveal('.foo', { duration: 1000 });
-</script>
-
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+	$(document).on('ready', function() {
+		$(".lazy").slick({
+			lazyLoad: 'ondemand', // ondemand progressive anticipated
+			infinite: true
+		});
+	});
 </script>
 
 </body>

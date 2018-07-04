@@ -50,35 +50,22 @@ body {
   background-color: #EFEFEF;
 }
 
-.blockchainillustration {
-  background-image: url(img/blockchain_iilustration.svg);
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: contain;
+.showall {
+  font-size: 1.6em;
+  text-transform: uppercase;
+  color: $color-blue;
+  text-decoration: none;
+  float: right;
 }
 
-.toolsimage {
-  background-image: url(img/tools.png);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: contain;
-  margin-top: -90px;
-  margin-bottom: 5.6em;
+.flip {
+  -moz-transform: scaleX(-1);
+   -o-transform: scaleX(-1);
+   -webkit-transform: scaleX(-1);
+   transform: scaleX(-1);
+   filter: FlipH;
+   -ms-filter: "FlipH";
 }
-
-.backgroundroadmap {
-  background-color: $color-illustration;
-}
-.space {
-  height: 72px;
-}
-
-.line {
-  background: url(img/line.png);
-  background-repeat: repeat-y;
-  background-position: center;
-}
-
 //FOOTER
 footer {
   margin-top: 12em;
@@ -172,7 +159,6 @@ h1 {
   line-height: 100%;
   text-align: left;
   text-rendering: optimizeLegibility;
-  padding-bottom: 2.8rem;
   color: $color-black;
 }
 
@@ -209,27 +195,6 @@ h4 {
   color: $color-black;
 }
 
-h5 {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 800;
-  font-size: 1.6em;
-  line-height: 150%;
-  text-align: center;
-  text-rendering: optimizeLegibility;
-  padding-bottom: 1.4rem;
-  color: $color-black;
-}
-
-h6 {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 800;
-  font-size: 1.2em;
-  line-height: 0;
-  text-align: center;
-  text-rendering: optimizeLegibility;
-  color: $color-black;
-}
-
 p {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
@@ -257,85 +222,6 @@ p {
 }
 .right_txt {
   text-align: right;
-}
-
-.value-txt {
-  font-size: 1.8rem;
-  padding-bottom: 1.4rem;
-}
-
-.featurestxt {
-  color: $color-lightgray;
-  font-size: 1.8rem;
-  padding-bottom: 2.4rem;
-}
-
-.question {
-  color: $color-black;
-  text-align: center;
-  font-size: 1.8em;
-}
-
-.infotxt {
-  font-size: 1.6em;
-  text-align: center;
-  margin-bottom: 3.6em;
-}
-
-.timelinetitle {
-  margin-top: 7.2rem;
-  margin-bottom: 3.6rem;
-}
-
-.version {
-  // background-color: $color-lightgray;
-  box-sizing: border-box;
-  border-bottom: 4px solid $color-black;
-  margin-bottom: 2.1rem;
-  margin-top: 2.1em;
-  padding: 16px 5px;
-  font-size: 1.4em;
-  // margin-left: auto;
-  // margin-right: auto;
-  // -webkit-box-shadow: 3px 5px 10px 0px rgba(63,63,63,0.2);
-  // -moz-box-shadow: 3px 5px 10px 0px rgba(63,63,63,0.2);
-  // box-shadow: 3px 5px 10px 0px rgba(63,63,63,0.2);
-  max-height: 36px;
-  max-width: 36px;
-  // border-radius: 6px;
-}
-
-.version_l{
-  margin-left: auto;
-}
-.version_r{
-  margin-right: auto;
-}
-
-.box {
-  background-color: $color-lightgray;
-  margin-top: 192px;
-  box-sizing: border-box;
-  // margin-bottom: 21px;
-  padding: 21px 21px;
-  -webkit-box-shadow: 3px 5px 10px 0px rgba(63,63,63,0.2);
-  -moz-box-shadow: 3px 5px 10px 0px rgba(63,63,63,0.2);
-  box-shadow: 3px 5px 10px 0px rgba(63,63,63,0.2);
-  border-radius: 6px;
-  height: 16em;
-}
-
-.roadmapinfo {
-  font-size: 1.6rem;
-  line-height: 150%;
-}
-p.roadmapinfo {
-  // margin-bottom: 1em;
-  padding-bottom: 0;
-}
-
-.roadmapbox > h4 {
-  padding-bottom: 1rem;
 }
 
 .copyright {
