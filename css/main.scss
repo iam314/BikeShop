@@ -41,7 +41,7 @@ body {
 }
 
 .divider {
-  border-bottom: 1px solid $color-black;
+  border-bottom: 1px solid lighten($color-black, 55);
 }
 
 //BACKGROUNDS
